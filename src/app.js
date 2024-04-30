@@ -18,5 +18,8 @@ app.use('/api/users',usersRouter);
 app.use('/api/pets',petsRouter);
 app.use('/api/adoptions',adoptionsRouter);  
 app.use('/api/sessions',sessionsRouter);
+app.use('/', (req, res) => {
+    res.send('Probando rama development')
+})
 
 app.listen(PORT,()=>console.log(`Listening on ${PORT}`))
